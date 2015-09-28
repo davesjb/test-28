@@ -1,0 +1,296 @@
+/*-------------------------------------Written by Dave Beckett---------------------------------------*/
+@import "global.less";
+/*---------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------320px to 479px--------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+	.content {
+		padding: 150px 50px 50px 50px;
+	}
+
+	/* Stop content flash on load */
+	nav#menu:not( .mm-menu ) {
+	   display: none;
+	}
+
+	.mm-menu { 
+		background: #00DEFF !important;
+		color: #FFF !important;
+	}
+
+	#brand {
+		background-color: @base-color;
+
+		header {
+			min-height: 58px;
+			background: @base-color;
+			.logo {
+				padding-top: 20px;
+				.content-gutter;
+			}
+		}
+
+			.header a {
+				background: center center no-repeat transparent;
+				background-image: url("../images/burger.png" );
+				display: block;
+				width: 36px;
+				height: 36px;
+				position: absolute;
+				bottom: -36px;
+				right: 0;
+				z-index: 2;
+			}
+
+		.nav-outer {
+			background-color: #3a3a3a;
+			nav.global-nav {
+				min-height: 36px;
+				ul {
+					margin: 0;
+					padding-left: 20px;
+					li {
+						display: none; /* Hidden on mobile */
+						float: left;
+						&:first-child a { 
+							border-left: solid 1px #4c4c4c;
+						}
+						a {
+							color: #FFF;
+							font-weight: 200;
+							line-height: 2;
+							margin: 2px 0;
+							padding: 3px 20px;
+							border-right: solid 1px #4c4c4c;
+							text-transform: uppercase;
+							&.active {
+								color: #9fd153;
+							}
+							&:hover {
+								color: #9fd153;
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.main-banner {
+			min-height: 252px;
+			background-image: url("../images/main-banner-small.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			h1 {
+				font-size: 24px;
+				line-height: 0.9;
+				text-transform: uppercase;
+				bottom: 0;
+				background: #525252;
+				padding-top: 11px;
+				padding-bottom: 11px;
+				.align-center;
+				span {
+					color: #cd1670;
+				}
+			}
+		}
+
+		.search-outer {
+			background: url("../images/search-bar-trans-bg.png") repeat-x; 
+			height: 55px;
+			.search-bar {
+				background-color: #000;
+				.fieldset {
+					width: 89%;
+					max-width: 548px;
+					display: block;
+					margin: 0.7em 0;
+					border: none;
+					padding: 0;
+					.border-radius(@topright: 35px, @bottomright: 35px, @bottomleft: 35px, @topleft: 35px);
+					background-color: #FFF;
+					.align-center;
+					input.search-input {
+						margin: 0.3em 0em 0em 0.5em;
+						font-size: 18px;
+						color: #000;
+						width: 73%;
+						padding-left: 10px;
+						.border-radius(@topright: 35px, @bottomright: 35px, @bottomleft: 35px, @topleft: 35px);
+						border: none;
+						float: left;
+						background: #FFF;
+					}
+					button.search-button {
+						margin-top: 9px;
+						border: none;
+						background: none;
+					}
+				}
+			}
+		}
+		
+		.content-outer {
+			background-color: #525252;
+			section.homepage-content {
+				text-align: center;
+				padding-top: 31px;
+				padding-bottom: 31px;
+				h2 {
+					font-size: 18px;
+					line-height: 1.6;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.categories-outer {
+				background: url("../images/pattern-bg.gif");
+			.categories {
+				width: 66%;
+				min-height: 240px;
+				margin: 0 auto;
+				padding-top: 31px;
+				padding-bottom: 51px;
+				a {
+					width: 141px;
+					height: 141px;
+					margin: 35px auto;
+					.border-radius(@topright: 50%, @bottomright: 50%, @bottomleft: 50%, @topleft: 50%);
+					display: block;
+					background-color: #000;
+					background-position: center;
+					background-repeat: no-repeat;
+						font-size: 18px;
+						line-height: 18;
+						text-align: center;
+						white-space: nowrap;
+						color: #FFF;
+				}
+				.roles a {
+					background-image: url("../images/roles.png");
+					background-color: #01defe;
+					&:hover {
+						background-color: #04BAD4;
+					}
+				}
+				.open-events a {
+					background-image: url("../images/open-events.png");
+					background-color: #cd1670;
+					&:hover {
+						background-color: #AB125D;
+					}
+				}
+				.recruitment-process a {
+					background-image: url("../images/recruitment-process.png");
+					background-color: #9fce50;
+					&:hover {
+						background-color: #82A942;
+					}
+					span {
+						margin-left: -10px;
+					}
+				}
+			} 
+		}
+
+		footer {
+			display: block;
+			min-height: 1px;
+			background-color: @base-color;
+			.copyright {
+				display: none;
+			}
+			.icons {
+				display: none;
+			}
+		}
+	}
+/*---------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------768px to 991px--------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+@media (min-width:@screen-tablet) {
+	#brand {
+
+		#burger {
+	      display: none !important;
+	  	}
+
+		.nav-outer {
+			nav.global-nav {
+				ul {
+					li {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.main-banner {
+			min-height: 470px;
+			background-image: url("../images/main-banner.jpg");
+			h1 {
+				font-size: 68px;
+				line-height: 0.9;
+				text-transform: uppercase;
+				bottom: 40px;
+				background: none;
+				padding: 0;
+				.align-center;
+				span {
+					color: #cd1670;
+				}
+			}
+		}
+
+		.content-gutter, p {
+			padding-left: 160px;
+			padding-right: 160px;
+		}
+
+		.categories-outer {
+			.categories {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+
+		footer {
+			display: block;
+			min-height: 116px;
+			background-color: @base-color;
+			.copyright {
+				display: block;
+				font-size: 16px;
+				position: absolute;
+				bottom: 35px;
+				left: 120px;
+			}
+			.icons {
+				display: block;
+				position: absolute;
+				bottom: 24px;
+				right: 120px;
+			}
+		}
+	}
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------992px and 1119px----------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+@media (min-width:@screen-desktop) {
+	#brand {
+		.nav-outer {
+			nav.global-nav {
+				ul {
+					li {
+						a {
+							padding: 3px 31px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

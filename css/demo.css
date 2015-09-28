@@ -1,0 +1,21 @@
+
+.header a
+{
+	background: center center no-repeat transparent;
+	background-image: url("../images/burger.png" );
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: -38px;
+	right: 10px;
+	z-index: 2;
+}
+.content
+{
+	padding: 150px 50px 50px 50px;
+}
+
+#my-content #my-menu {
+   display: none;
+}

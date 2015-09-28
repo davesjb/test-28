@@ -1,0 +1,319 @@
+/*-------------------------------------Written by Dave Beckett---------------------------------------*/
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+.word_wrap {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+.transition {
+  -moz-transition-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0.2s ease-in-out;
+}
+/* Border Radius */
+/* Border Radius for Inputs, Selects, TextAreas */
+/* ---- HTML ELEMENTS ---- */
+body {
+  color: #FFF;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  margin: 0 auto;
+  padding: 0;
+}
+html {
+  background: none;
+  -webkit-text-size-adjust: 100%;
+}
+em {
+  font-style: italic;
+}
+code {
+  color: #222222;
+}
+iframe {
+  width: 100%;
+}
+input:focus {
+  outline: none;
+}
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 200;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+p a {
+  display: inline;
+}
+strong {
+  font-weight: bold;
+}
+em strong,
+i strong,
+em b,
+i b {
+  font-style: italic;
+}
+ul li {
+  list-style: disc;
+}
+ol li {
+  list-style: decimal;
+}
+ol li ol li {
+  list-style: lower-alpha;
+}
+/* ---- SITEWIDE  ---- */
+.content-gutter {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.align-center {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+/* ---- LINKS  ---- */
+a {
+  text-decoration: none;
+  display: block;
+}
+a:active {
+  outline: none;
+}
+a:focus {
+  outline: none;
+  color: #9fd153;
+}
+a:hover {
+  color: #333;
+  outline: none;
+  text-decoration: underline;
+}
+a:link {
+  color: #9fd153;
+}
+a:visited {
+  color: #9fd153;
+}
+/* ---- HEADINGS  ---- */
+.headings {
+  color: #FFF;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #FFF;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.6;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+h1 {
+  font-size: 68px;
+}
+h2 {
+  font-size: 44px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 10px;
+}
+/* ---- BACKGROUNDS ---- */
+.sprite {
+  background-image: url("../images/sprite.png");
+  background-repeat: no-repeat;
+}
+.border-bottom {
+  border-bottom: solid 1px #36444d;
+}
+/* ---- LAYOUT  ---- */
+.clearfloat {
+  clear: both;
+}
+.pull-right {
+  float: right;
+  padding-right: 20px;
+}
+.pull-left {
+  float: left;
+  padding-left: 20px;
+}
+.imgright {
+  float: right;
+  padding-right: 20px;
+  margin-left: 10px;
+  width: auto;
+}
+.imgleft {
+  float: left;
+  padding-left: 20px;
+  margin-right: 10px;
+  width: auto;
+}
+.container-fluid {
+  width: 100%;
+  position: relative;
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.column,
+.float {
+  display: inline-block;
+  vertical-align: top;
+}
+.row {
+  clear: both;
+  margin-bottom: 10px;
+}
+.row img {
+  width: 100%;
+}
+.one-third + .two-thirds {
+  margin-right: 0;
+}
+.two-thirds + .one-third {
+  margin-right: 0;
+}
+.one-fourth + .three-fourth {
+  margin-right: 0;
+}
+.one-half {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.two-thirds {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.one-third {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.three-fourth {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.one-fourth {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.one-fifth {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.two-fifths {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.three-fifths {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------992px and 1119px----------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+@media (min-width: 768px) {
+  /* ---- LAYOUT  ---- */
+  .pull-right {
+    float: right;
+    padding-right: 120px;
+  }
+  .pull-left {
+    float: left;
+    padding-left: 120px;
+  }
+  .one-half {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+  }
+  .two-thirds {
+    display: inline-block;
+    vertical-align: top;
+    width: 66%;
+  }
+  .one-third {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+  }
+  .three-fourth {
+    display: inline-block;
+    vertical-align: top;
+    width: 74.5%;
+  }
+  .one-fourth {
+    display: inline-block;
+    vertical-align: top;
+    width: 23.5%;
+  }
+  .one-fifth {
+    display: inline-block;
+    vertical-align: top;
+    width: 18%;
+  }
+  .two-fifths {
+    display: inline-block;
+    vertical-align: top;
+    width: 36%;
+  }
+  .three-fifths {
+    display: inline-block;
+    vertical-align: top;
+    width: 54%;
+  }
+}

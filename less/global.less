@@ -1,0 +1,316 @@
+/*-------------------------------------Written by Dave Beckett---------------------------------------*/
+@import "elements.less";
+@import "variables.less";
+/* ---- HTML ELEMENTS ---- */
+body {
+	color: #FFF;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 200;
+	margin: 0 auto;
+	padding: 0;
+}
+
+html {
+	background: none;
+	 -webkit-text-size-adjust: 100%; //Prevent font scaling in landscape while allowing user zoom
+}
+
+em {
+	font-style: italic;
+}
+
+code {
+	color: #222222;
+}
+
+iframe {
+	width: 100%;
+}
+
+input:focus {
+	outline: none;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.6;
+	font-weight: 200;
+	margin: 0;
+	.content-gutter;
+}
+
+p a {
+	display: inline;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em, i {
+	strong, b {
+		font-style: italic;
+	}
+}
+
+ul {
+	li {
+		list-style: disc;
+	}
+}
+
+ol {
+	li {
+		list-style: decimal;
+		ol {
+			li {
+				list-style: lower-alpha;
+			}
+		}
+	}
+}
+/* ---- SITEWIDE  ---- */
+.content-gutter {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.align-center {
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+/* ---- LINKS  ---- */
+a {
+	text-decoration: none;
+	display: block;
+	&:active {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+		color: #9fd153;
+	}
+	&:hover {
+		color: #333;
+		outline: none;
+		text-decoration: underline;
+	}
+	&:link {
+		color: #9fd153;
+	}
+	&:visited {
+		color: #9fd153;
+	}
+}
+
+/* ---- HEADINGS  ---- */
+
+.headings {
+	color: #FFF;
+	font-weight: 200;
+	margin: 0;
+	line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	.headings;
+	.content-gutter;
+}
+
+h1 {
+	font-size: 68px;
+}
+
+h2 {
+	font-size: 44px;
+}
+
+h3 {
+	font-size: 36px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 10px;
+}
+
+/* ---- BACKGROUNDS ---- */
+.sprite {
+	background-image: url("../images/sprite.png");
+	background-repeat: no-repeat;
+}
+
+.border-bottom {
+	border-bottom: solid 1px #36444d;
+}
+
+/* ---- LAYOUT  ---- */
+.clearfloat {
+	clear: both;
+}
+
+.pull-right {
+	float: right;
+	padding-right: 20px;
+}
+
+.pull-left {
+	float: left;
+	padding-left: 20px;
+}
+
+.imgright {
+	.pull-right;
+	margin-left: 10px;
+	width: auto;
+}
+.imgleft {
+	.pull-left;
+	margin-right: 10px;
+	width: auto;
+}
+
+.container-fluid {
+	width: 100%;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.column, .float {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.row {
+	clear: both;
+	margin-bottom: 10px;
+	img { width: 100% }
+}
+
+.one-third + .two-thirds {
+	margin-right: 0;
+}
+
+.two-thirds + .one-third {
+	margin-right: 0;
+}
+
+.one-fourth + .three-fourth {
+	margin-right: 0;
+}
+
+.one-half {
+	.column;
+	width: 100%;
+}
+
+.two-thirds {
+	.column;
+	width: 100%;
+}
+
+.one-third {
+	.column;
+	width: 100%;
+}
+
+.three-fourth {
+	.column;
+	width: 100%;
+}
+
+.one-fourth {
+	.column;
+	width: 100%;
+}
+
+.one-fifth {
+	.column;
+	width: 100%;
+}
+
+.two-fifths {
+	.column;
+	width: 100%;
+}
+
+.three-fifths {
+	.column;
+	width: 100%;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------992px and 1119px----------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+@media (min-width:@screen-tablet) {
+	/* ---- LAYOUT  ---- */
+	.pull-right {
+		float: right;
+		padding-right: 120px;
+	}
+
+	.pull-left {
+		float: left;
+		padding-left: 120px;
+	}
+
+	.one-half {
+		.column;
+		width: 48%;
+	}
+
+	.two-thirds {
+		.column;
+		width: 66%;
+	}
+
+	.one-third {
+		.column;
+		width: 32%;
+	}
+
+	.three-fourth {
+		.column;
+		width: 74.5%;
+	}
+
+	.one-fourth {
+		.column;
+		width: 23.5%;
+	}
+
+	.one-fifth {
+		.column;
+		width: 18%;
+	}
+
+	.two-fifths {
+		.column;
+		width: 36%;
+	}
+
+	.three-fifths {
+		.column;
+		width: 54%;
+	}
+}
